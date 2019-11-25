@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit transaction-type="RESOURCE_LOCAL" name="academia">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.model.Aluno</class>
+		<class>com.model.Funcionario</class>
+		<class>com.model.Professor</class>
+		<class>com.model.Equipamento</class>
+		<class>com.model.Treino</class>
+
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1/academia" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
